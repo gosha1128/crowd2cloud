@@ -1,0 +1,3 @@
+* Ian, whats the best way to play multiple sounds in a processing application ?
+
+* Graham, whats the best way to play multiple sounds in python?
