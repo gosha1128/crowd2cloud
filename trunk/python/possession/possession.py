@@ -158,7 +158,7 @@ class Graphics:
             self.col.set_offsets(pos)
 
     def erase_clock(self):
-        del self.ax.collections[1] # delete patch collection (wedge)
+        self.ax.collections.remove(self.patches) # delete patch collection (wedge)
 
     def draw_clock(self,theta):
         # clock
@@ -172,9 +172,9 @@ class Graphics:
 
         # note that match_original must be set to True for colors to take effect
         # otherwise colormap will be applied
-        p = PatchCollection(patches, match_original=True)
+        self.patches = PatchCollection(patches, match_original=True)
 
-        self.ax.add_collection(p)
+        self.ax.add_collection(self.patches)
 
     def update_scores(self,posscore,negscore):
         self.tpos.set_text("%d" % posscore)
@@ -402,7 +402,8 @@ class Game:
         #mode = GAMEON # debug
         #reset_clock()
 
-        while True:
+        done = False
+        while not done:
 
             if self.simulation_mode: # read from file
 
