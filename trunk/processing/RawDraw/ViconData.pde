@@ -24,15 +24,15 @@ class ViconData {
 
     this.simulated = simulated;
 
-    minXYZ = new PVector(-4000, -6000, 0);
-    maxXYZ = new PVector(4800, 1200, 3300);
+    minXYZ = new PVector(-12000, -12000, 0);
+    maxXYZ = new PVector(12000, 12000, 5000);
 
     deltaXYZ = PVector.sub(maxXYZ, minXYZ);
     meanXYZ = PVector.add(maxXYZ, minXYZ);
     meanXYZ.div(2);    
 
     if (simulated) {
-      lines = loadStrings("recording.txt");
+      lines = loadStrings("log.txt");
       numberLines = lines.length;
     } 
     else {
