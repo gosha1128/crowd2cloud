@@ -1,0 +1,3 @@
+The NYU Movement Lab is working with a team of collaborators to produce a new series of crowd gaming experiences. 2010 started with an event at Brooklyn's Bell House based on technology developed for Squidball.
+
+We are in need of volunteers for research & development of these interactive experiences and testing and production at various locations in New York City. If you are interested please send us email: info@movement.nyu.edu
